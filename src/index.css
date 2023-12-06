@@ -1,0 +1,8 @@
+a,
+a:active {
+  text-decoration: none;
+}
+
+.navbar-brand a {
+  color: white;
+}
