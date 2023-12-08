@@ -39,7 +39,5 @@ ul {
 }
 
 .country-search {
-  margin: 20px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
+  margin: 0 0 20px;
 }

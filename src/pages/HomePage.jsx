@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import { ListGroup, Spinner } from 'react-bootstrap';
+import { ListGroup, Spinner, InputGroup, Form } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
 
 function HomePage() {
   const [countryData, setCountryData] = useState(null);
@@ -31,16 +32,21 @@ function HomePage() {
   return (
     <div>
       <h1 className="page-title">WikiCountries: Your Guide to the World</h1>
-      <input
-        type="text"
-        value={searchInput}
-        onChange={handleSearchInput}
-        placeholder="Search Country"
-        className="country-search"
-      />
+
       <br />
       {countryData === null && <Spinner></Spinner>}
       <ListGroup as="ul">
+        <InputGroup className="country-search">
+          <InputGroup.Text>
+            <FaSearch />
+          </InputGroup.Text>
+          <Form.Control
+            type="text"
+            value={searchInput}
+            onChange={handleSearchInput}
+            placeholder="Search Country"
+          />
+        </InputGroup>
         {filteredCountryData &&
           filteredCountryData
             .toSorted((a, b) => a.name.common.localeCompare(b.name.common))
