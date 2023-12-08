@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function NavigationBar() {
   return (
-    <Navbar bg="primary" data-bs-theme="dark">
+    <Navbar bg="primary" data-bs-theme="dark" fixed="top">
       <Container>
         <Navbar.Brand>
           <NavLink to="/">WikiCountries</NavLink>

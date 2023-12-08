@@ -1,8 +1,26 @@
-a,
-a:active {
+.navbar-brand a {
+  color: white;
   text-decoration: none;
 }
 
-.navbar-brand a {
-  color: white;
+.page-title {
+  margin: 90px 30px 30px;
+}
+
+ul {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.flag-image {
+  margin: 10px;
+}
+
+.country-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.country-name {
+  vertical-align: middle;
 }
