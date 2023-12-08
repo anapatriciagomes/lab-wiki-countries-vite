@@ -39,35 +39,46 @@ function CountryDetails() {
             width={50}
             className="flag-image-details-page"
           />
-          <h3>Capital</h3>
-          <p>{countryDetails.capital}</p>
-          <h3>Area</h3>
-          <p>
-            {countryDetails.area
-              .toLocaleString('en-US', { minimumFractionDigits: 0 })
-              .replace(/,/g, '.')}{' '}
-            kms
-          </p>
-          {countryDetails && countryDetails.borders.length > 0 && (
-            <h3>Borders</h3>
-          )}
-          {countryDetails &&
-            countryDetails.borders.map((borderCountry, index) => {
-              return (
-                <NavLink
-                  key={index}
-                  to={`/${borderCountry}`}
-                  className="country-link"
-                >
-                  {countryData &&
-                    countryData.map(country => {
-                      if (country.alpha3Code === borderCountry) {
-                        return <p key={country._id}>{country.name.common}</p>;
-                      }
-                    })}
-                </NavLink>
-              );
-            })}
+
+          <div className="flex-country-details">
+            <div className="detail-group">
+              <h3>Capital</h3>
+              <p>{countryDetails.capital}</p>
+            </div>
+            <div className="detail-group">
+              <h3>Area</h3>
+              <p>
+                {countryDetails.area
+                  .toLocaleString('en-US', { minimumFractionDigits: 0 })
+                  .replace(/,/g, '.')}{' '}
+                kms
+              </p>
+            </div>
+            <div className="detail-group">
+              {countryDetails && countryDetails.borders.length > 0 && (
+                <h3>Borders</h3>
+              )}
+              {countryDetails &&
+                countryDetails.borders.map((borderCountry, index) => {
+                  return (
+                    <NavLink
+                      key={index}
+                      to={`/${borderCountry}`}
+                      className="country-link"
+                    >
+                      {countryData &&
+                        countryData.map(country => {
+                          if (country.alpha3Code === borderCountry) {
+                            return (
+                              <p key={country._id}>{country.name.common}</p>
+                            );
+                          }
+                        })}
+                    </NavLink>
+                  );
+                })}
+            </div>
+          </div>
         </div>
       )}
     </div>

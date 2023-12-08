@@ -12,6 +12,15 @@ ul {
   margin: 0 auto;
 }
 
+.flex-country-details {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-group {
+  margin: 20px;
+}
+
 .flag-image {
   margin: 10px;
 }
