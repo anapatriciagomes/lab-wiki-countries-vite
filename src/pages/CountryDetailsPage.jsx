@@ -29,7 +29,7 @@ function CountryDetails() {
 
   return (
     <div>
-      {countryDetails && <Spinner></Spinner>}
+      {countryDetails === null && <Spinner></Spinner>}
       {countryDetails && (
         <div>
           <h2 className="page-title">{countryDetails.name.common}</h2>
@@ -58,6 +58,7 @@ function CountryDetails() {
               {countryDetails && countryDetails.borders.length > 0 && (
                 <h3>Borders</h3>
               )}
+              {countryData === null && <Spinner></Spinner>}
               {countryDetails &&
                 countryDetails.borders.map((borderCountry, index) => {
                   return (

@@ -37,3 +37,9 @@ ul {
 .country-name {
   vertical-align: middle;
 }
+
+.country-search {
+  margin: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
