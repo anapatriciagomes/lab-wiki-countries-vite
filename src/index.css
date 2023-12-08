@@ -4,7 +4,7 @@
 }
 
 .page-title {
-  margin: 90px 30px 30px;
+  margin: 90px 30px 10px;
 }
 
 ul {
@@ -14,6 +14,10 @@ ul {
 
 .flag-image {
   margin: 10px;
+}
+
+.flag-image-details-page {
+  margin: 10px 0 30px;
 }
 
 .country-link {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { ListGroup, Spinner } from 'react-bootstrap';
 
 function HomePage() {
   const [countryData, setCountryData] = useState(null);
@@ -18,7 +18,7 @@ function HomePage() {
   return (
     <div>
       <h1 className="page-title">WikiCountries: Your Guide to the World</h1>
-      {countryData === null && <p>Loading...</p>}
+      {countryData === null && <Spinner></Spinner>}
       <ListGroup as="ul">
         {countryData &&
           countryData.map(country => {
